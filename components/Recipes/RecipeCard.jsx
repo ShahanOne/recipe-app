@@ -17,7 +17,7 @@ const RecipeCard = ({
     >
       <Image
         className="rounded-md w-full object-cover"
-        src={'/pasta.jpg'}
+        src={picture ? picture : '/pasta.jpg'}
         alt="recipe_picture"
         // layout="responsive"
         width={150}
