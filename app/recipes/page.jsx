@@ -6,7 +6,7 @@ import { Modal } from 'antd';
 import axios from 'axios';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
 const Recipe = () => {
   const searchParams = useSearchParams();
@@ -42,7 +42,7 @@ const Recipe = () => {
     router.push('/');
   };
   return (
-    <>
+    <Suspense>
       {' '}
       {isSignedIn ? (
         <Navbar isSignedIn={true} signOut={signOut} />
@@ -125,7 +125,7 @@ const Recipe = () => {
           )}
         </Modal>
       )}
-    </>
+    </Suspense>
   );
 };
 export default Recipe;
