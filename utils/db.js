@@ -14,7 +14,6 @@ export async function connectDB() {
   const client = await mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    poolSize: 10,
   });
 
   cachedClient = client;
