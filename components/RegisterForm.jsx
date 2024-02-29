@@ -15,6 +15,7 @@ const RegisterForm = ({ toLogin }) => {
 
   const register = async () => {
     if (password !== confirmPassword || !isValidEmail) {
+      alert('Please enter a valid email');
       return;
     }
     try {
